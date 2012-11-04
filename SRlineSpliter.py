@@ -5,7 +5,13 @@ Created on 2012. 11. 2.
 '''
 #-*- encoding: utf-8 -*-
 from __future__ import print_function
-logfile = '20121102.txt';
+import time
+year = "%04d" % time.localtime().tm_year
+month = "%02d" % time.localtime().tm_mon
+day = "%02d" % time.localtime().tm_mday
+todaydate = year + month + day
+logfile = todaydate + '.txt'
+
 try:
 	data = open(logfile);
 	for each_line in data:
