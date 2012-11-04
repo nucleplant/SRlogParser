@@ -5,9 +5,9 @@ Created on 2012. 11. 2.
 '''
 #-*- encoding: utf-8 -*-
 from __future__ import print_function
-
+logfile = '20121102.txt';
 try:
-	data = open('20121102.txt');
+	data = open(logfile);
 	for each_line in data:
 		try:
 			(SRtype, requester, title, status) = each_line.split('/', 3)
